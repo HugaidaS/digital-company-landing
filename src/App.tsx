@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AppBar from "./Components/Navigation/AppBarWithStyles";
+import { MainPage } from "./Components/mainPage";
+import { withStyles } from "@material-ui/core/styles";
+import { mainTheme } from "./App/Theme/mainTheme";
 
-function App() {
+const styles = (theme: any) => ({
+  App: {
+    color: mainTheme.palette.primary.main,
+    backgroundColor: mainTheme.palette.background.default,
+    fontSize: "10px",
+  },
+});
+
+function App(props: any) {
+  const { classes } = props;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.App}>
+      <AppBar />
+      <MainPage />
     </div>
   );
 }
 
-export default App;
+export default withStyles(styles)(App);
