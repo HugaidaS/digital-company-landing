@@ -7,6 +7,7 @@ import IconButton from "@material-ui/core/IconButton";
 import AppBarCollapse from "./AppBar/AppBarCollapse";
 import { Button, Container } from "@material-ui/core";
 import { mainTheme } from "../../App/Theme/mainTheme";
+import { HideOnScroll } from "./HideOnScroll";
 
 const styles = (theme) => ({
   menuButton: {
@@ -69,18 +70,20 @@ const ButtonAppBar = (props) => {
   );
   return (
     <header>
-      <AppBar position="fixed" color="background.default">
-        <Toolbar className={classes.toolbar}>
-          <Button children={logoButton} href="#home" color="primary" />
-          <AppBarCollapse />
-          <Container
-            component="img"
-            alt="status"
-            src="./imgs/SPG_status.png"
-            className={classes.statusImage}
-          />
-        </Toolbar>
-      </AppBar>
+      <HideOnScroll {...props}>
+        <AppBar position="fixed" color="background.default">
+          <Toolbar className={classes.toolbar}>
+            <Button children={logoButton} href="#home" color="primary" />
+            <AppBarCollapse />
+            <Container
+              component="img"
+              alt="status"
+              src="./imgs/SPG_status.png"
+              className={classes.statusImage}
+            />
+          </Toolbar>
+        </AppBar>
+      </HideOnScroll>
     </header>
   );
 };

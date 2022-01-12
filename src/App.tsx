@@ -2,6 +2,7 @@ import AppBar from "./Components/Navigation/AppBarWithStyles";
 import { MainPage } from "./Components/mainPage";
 import { withStyles } from "@material-ui/core/styles";
 import { mainTheme } from "./App/Theme/mainTheme";
+import CssBaseline from "@mui/material/CssBaseline";
 
 const styles = (theme: any) => ({
   App: {
@@ -15,6 +16,7 @@ function App(props: any) {
   const { classes } = props;
   return (
     <div className={classes.App}>
+      <CssBaseline />
       <AppBar />
       <MainPage />
     </div>

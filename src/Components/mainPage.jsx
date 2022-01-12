@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import { AboutUs } from "./Pages/About/AboutUs";
+import AboutUs from "./Pages/About/AboutUs";
 import { HomePage } from "./Pages/HomeScreen/HomePage";
 import { PricePage } from "./Pages/Price/PricePage";
 import { Solutions } from "./Pages/Solutions/Solutions";
