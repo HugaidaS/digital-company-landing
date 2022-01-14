@@ -1,6 +1,7 @@
 import { Box, Container, Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/core/styles";
+import Customers from "./Customers";
 import { FeaturesContainer } from "./FeaturesContainer";
 
 const useStyles = makeStyles((theme) => ({}));
@@ -15,6 +16,7 @@ const AboutUs = () => {
           </Box>
         </Typography>
         <FeaturesContainer />
+        <Customers />
       </Container>
     </section>
   );
