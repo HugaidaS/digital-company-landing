@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/digital-company-landing/static/css/main.bae5670f.css",
+    "main.js": "/digital-company-landing/static/js/main.b80f37e4.js",
+    "index.html": "/digital-company-landing/index.html",
+    "main.bae5670f.css.map": "/digital-company-landing/static/css/main.bae5670f.css.map",
+    "main.b80f37e4.js.map": "/digital-company-landing/static/js/main.b80f37e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bae5670f.css",
+    "static/js/main.b80f37e4.js"
+  ]
+}
