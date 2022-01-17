@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/digital-company-landing/static/css/main.bae5670f.css",
-    "main.js": "/digital-company-landing/static/js/main.8dea8ee5.js",
+    "main.js": "/digital-company-landing/static/js/main.20ecc6cf.js",
     "index.html": "/digital-company-landing/index.html",
     "main.bae5670f.css.map": "/digital-company-landing/static/css/main.bae5670f.css.map",
-    "main.8dea8ee5.js.map": "/digital-company-landing/static/js/main.8dea8ee5.js.map"
+    "main.20ecc6cf.js.map": "/digital-company-landing/static/js/main.20ecc6cf.js.map"
   },
   "entrypoints": [
     "static/css/main.bae5670f.css",
-    "static/js/main.8dea8ee5.js"
+    "static/js/main.20ecc6cf.js"
   ]
 }
