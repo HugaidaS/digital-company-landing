@@ -1,7 +1,7 @@
-import { Box, Container, Grid, Paper, Typography } from "@material-ui/core";
 import Carousel from "react-material-ui-carousel";
 import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 import toChunk from "../../../App/Utils/toChunk";
+import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 
 function Item(props) {
   return (
@@ -10,10 +10,15 @@ function Item(props) {
         return (
           <Grid item xs={12} sm={4} md={4} lg={4}>
             <Paper>
-              <Box sx={{ height: "150px" }}>
-                <h2>{item.name}</h2>
-                <p>{item.description}</p>
-              </Box>
+              <Box
+                sx={{
+                  height: "150px",
+                  backgroundImage: `url(${item.url})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></Box>
             </Paper>
           </Grid>
         );
@@ -25,28 +30,31 @@ function Item(props) {
 const Customers = () => {
   var items = [
     {
-      name: "Random Name #1",
-      description: "Probably the most random thing you have ever seen!",
+      url: "./imgs/customers/rn-tyapse.png",
     },
     {
-      name: "Random Name #1",
-      description: "Hello World!",
+      url: "./imgs/customers/gazprom.jpg",
     },
     {
-      name: "Random Name #1",
-      description: "Hello World!",
+      url: "./imgs/customers/glt.png",
     },
     {
-      name: "Random Name #2",
-      description: "Hello World!",
+      url: "./imgs/customers/arnest.png",
     },
     {
-      name: "Random Name #2",
-      description: "Hello World!",
+      url: "./imgs/customers/mso-pan.jpg",
     },
     {
-      name: "Random Name #2",
-      description: "Hello World!",
+      url: "./imgs/customers/Radezh.jpg",
+    },
+    {
+      url: "./imgs/customers/SKFNKC.jpg",
+    },
+    {
+      url: "./imgs/customers/volma.jpg",
+    },
+    {
+      url: "./imgs/customers/zgazprom-transgaz.jpg",
     },
   ];
 

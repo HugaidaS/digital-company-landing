@@ -1,16 +1,6 @@
+import { Avatar, Box, Grid, List, ListItem, Typography } from "@mui/material";
 import Grow from "@mui/material/Grow";
 import Paper from "@mui/material/Paper";
-import {
-  Avatar,
-  Box,
-  Grid,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-} from "@material-ui/core";
-import { StarBorder } from "@material-ui/icons";
 
 export const Feature = ({
   showOptions,
@@ -28,7 +18,12 @@ export const Feature = ({
           elevation={3}
           sx={{ height: "500px", padding: "1rem", boxSizing: "border-box" }}
         >
-          <Grid container direction="row" alignItems="center">
+          <Grid
+            container
+            direction="row"
+            alignItems="center"
+            sx={{ marginBottom: "10px" }}
+          >
             <Box sx={{ marginRight: "1rem" }}>
               <Grid item xs={2}>
                 <Avatar alt={title} src={image} variant="square" />
@@ -36,7 +31,7 @@ export const Feature = ({
             </Box>
             <Grid item xs={9}>
               <Typography>
-                <Box sx={{ fontWeight: "700" }}>{title}</Box>
+                <Box sx={{ fontWeight: "700", fontSize: "14px" }}>{title}</Box>
               </Typography>
             </Grid>
           </Grid>

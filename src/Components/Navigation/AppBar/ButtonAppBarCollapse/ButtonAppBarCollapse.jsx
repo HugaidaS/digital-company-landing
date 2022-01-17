@@ -1,17 +1,14 @@
-import React, { useState } from "react";
-import { withStyles } from "@material-ui/core/styles";
-import { Menu } from "@material-ui/core";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import { MenuRounded } from "@mui/icons-material";
+import { Box, IconButton, Menu } from "@mui/material";
+import { useState } from "react";
+import { mainTheme } from "../../../../App/Theme/mainTheme";
 
-const styles = (theme) => ({
-  buttonCollapse: {
-    [theme.breakpoints.up("lg")]: {
-      display: "none",
-    },
-    boxShadow: "none",
+const buttonCollapse = {
+  [mainTheme.breakpoints.up("lg")]: {
+    display: "none",
   },
-});
+  boxShadow: "none",
+};
 
 export const ButtonAppBarCollapse = (props) => {
   let [anchorEl, setAnchorEl] = useState(null);
@@ -21,13 +18,12 @@ export const ButtonAppBarCollapse = (props) => {
   let handleClose = () => {
     setAnchorEl(null);
   };
-  let { classes } = props;
   const open = Boolean(anchorEl);
 
   return (
-    <div className={classes.buttonCollapse}>
+    <Box sx={buttonCollapse}>
       <IconButton onClick={handleMenu}>
-        <MenuIcon />
+        <MenuRounded />
       </IconButton>
       <Menu
         id="menu-appbar"
@@ -45,8 +41,8 @@ export const ButtonAppBarCollapse = (props) => {
       >
         {props.children}
       </Menu>
-    </div>
+    </Box>
   );
 };
 
-export default withStyles(styles)(ButtonAppBarCollapse);
+export default ButtonAppBarCollapse;

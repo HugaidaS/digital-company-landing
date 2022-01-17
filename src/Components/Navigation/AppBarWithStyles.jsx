@@ -1,68 +1,53 @@
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import IconButton from "@material-ui/core/IconButton";
 import AppBarCollapse from "./AppBar/AppBarCollapse";
-import { Button, Container } from "@material-ui/core";
-import { mainTheme } from "../../App/Theme/mainTheme";
 import { HideOnScroll } from "./HideOnScroll";
+import {
+  AppBar,
+  Button,
+  Container,
+  IconButton,
+  Toolbar,
+  Typography,
+  Box,
+} from "@mui/material";
+import { mainTheme } from "../../App/Theme/mainTheme";
 
-const styles = (theme) => ({
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
+const toggleDrawer = { borderRadius: "5%" };
+const statusImage = {
+  margin: "0",
+  padding: "0",
+  maxWidth: "250px",
+  maxHeight: "150px",
+  [mainTheme.breakpoints.down("md")]: {
+    display: "none",
   },
-  toggleDrawer: { borderRadius: "5%" },
-  appTitle: {
-    marginLeft: "10px",
-    fontWeight: "Bold",
-    textAlign: "left",
-    color: mainTheme.palette.primary.main,
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "2rem",
-    },
+};
+const logoTitleAppBar = {
+  margin: "0 10px",
+  fontWeight: "Bold",
+  color: "primary.main",
+  [mainTheme.breakpoints.down("xs")]: {
+    fontSize: "2rem",
   },
-  appSubtitle: {
-    [theme.breakpoints.down("xs")]: {
-      fontSize: "1rem",
-    },
+};
+const toolbar = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-around",
+  [mainTheme.breakpoints.down("md")]: {
+    justifyContent: "space-between",
   },
-  toolbar: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
-    [theme.breakpoints.down("md")]: {
-      justifyContent: "space-between",
-    },
-  },
-  statusImage: {
-    margin: "0",
-    padding: "0",
-    maxWidth: "200px",
-    maxHeight: "150px",
-    [theme.breakpoints.down("md")]: {
-      display: "none",
-    },
-  },
-});
+};
 
 const ButtonAppBar = (props) => {
-  const { classes } = props;
   const logoButton = (
-    <IconButton aria-label="LogoErker" className={classes.toggleDrawer}>
+    <IconButton aria-label="LogoErker" sx={toggleDrawer}>
       <img
         alt="Logo"
         src="https://img.icons8.com/external-parzival-1997-outline-color-parzival-1997/64/000000/external-digital-transformation-digital-transformation-parzival-1997-outline-color-parzival-1997.png"
       />
-      <Typography variant="h5" className={classes.appTitle}>
+      <Typography variant="h5" sx={logoTitleAppBar} align="left">
         Эркер
-        <Typography
-          variant="subtitle1"
-          component="div"
-          className={classes.appSubtitle}
-        >
+        <Typography variant="subtitle1" component="div">
           Digital Transformation
         </Typography>
       </Typography>
@@ -71,16 +56,17 @@ const ButtonAppBar = (props) => {
   return (
     <header>
       <HideOnScroll {...props}>
-        <AppBar position="fixed" color="background.default">
-          <Toolbar className={classes.toolbar}>
+        <AppBar position="fixed" color="background">
+          <Toolbar sx={toolbar}>
             <Button children={logoButton} href="#home" color="primary" />
             <AppBarCollapse />
-            <Container
-              component="img"
-              alt="status"
-              src="./imgs/SPG_status.png"
-              className={classes.statusImage}
-            />
+            <Box sx={statusImage}>
+              <Container
+                component="img"
+                alt="status"
+                src="./imgs/SPG_status.png"
+              />
+            </Box>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
@@ -88,8 +74,4 @@ const ButtonAppBar = (props) => {
   );
 };
 
-ButtonAppBar.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(ButtonAppBar);
+export default ButtonAppBar;

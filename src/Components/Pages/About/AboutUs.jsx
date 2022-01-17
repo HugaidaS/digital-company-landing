@@ -1,17 +1,18 @@
-import { Box, Container, Typography } from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
-import { makeStyles } from "@material-ui/core/styles";
+import { Box, Container, Typography } from "@mui/material";
 import Customers from "./Customers";
 import { FeaturesContainer } from "./FeaturesContainer";
-
-const useStyles = makeStyles((theme) => ({}));
 
 const AboutUs = () => {
   return (
     <section id="about">
       <Container maxWidth="lg">
         <Typography variant="h2" align="center">
-          <Box sx={{ fontWeight: "700", marginBottom: "2.5rem" }}>
+          <Box
+            sx={{
+              fontWeight: "700",
+              marginBottom: "2.5rem",
+            }}
+          >
             Почему выбирают Нас?
           </Box>
         </Typography>
@@ -22,4 +23,4 @@ const AboutUs = () => {
   );
 };
 
-export default withStyles(useStyles)(AboutUs);
+export default AboutUs;

@@ -36,9 +36,9 @@ section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  justify-content: space-around;
 }
 div::-webkit-scrollbar {
   width: 6px;

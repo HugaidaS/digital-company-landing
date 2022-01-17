@@ -1,36 +1,27 @@
-import { MenuItem } from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
 import ButtonAppBarCollapse from "./ButtonAppBarCollapse/ButtonAppBarCollapse";
 import NavTabs from "./Tabs/Tabs";
 import AllLinkTabs from "../../../App/LinkTabsHoc";
+import { mainTheme } from "../../../App/Theme/mainTheme";
+import { Box, MenuItem } from "@mui/material";
 
-const styles = (theme) => ({
-  root: {
-    right: 0,
+const buttonBar = {
+  [mainTheme.breakpoints.down("md")]: {
+    display: "none",
   },
-  buttonBar: {
-    [theme.breakpoints.down("md")]: {
-      display: "none",
-    },
-    right: 0,
-    position: "relative",
-    width: "100%",
-    background: "transparent",
-  },
-});
+};
 const allTabs = AllLinkTabs();
 
 const AppBarCollapse = (props) => (
-  <div className={props.classes.root}>
+  <div>
     <ButtonAppBarCollapse>
       {allTabs.map((tab) => {
         return <MenuItem>{tab}</MenuItem>;
       })}
     </ButtonAppBarCollapse>
-    <div className={props.classes.buttonBar} id="appbar-collapse">
+    <Box sx={buttonBar}>
       <NavTabs />
-    </div>
+    </Box>
   </div>
 );
 
-export default withStyles(styles)(AppBarCollapse);
+export default AppBarCollapse;

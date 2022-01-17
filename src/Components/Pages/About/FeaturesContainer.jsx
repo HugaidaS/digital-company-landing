@@ -1,5 +1,5 @@
+import { Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { Grid } from "@material-ui/core";
 import { featuresData } from "../../../App/Config/featuresData";
 import { Feature } from "./Feature";
 
