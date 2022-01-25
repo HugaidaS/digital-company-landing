@@ -1,28 +1,30 @@
 export const themeOptionsLight = {
   palette: {
     type: "light",
+    default: {
+      main: "#fff",
+    },
     primary: {
       main: "#0a1239",
     },
     secondary: {
       main: "#20bb41",
     },
-    background: {
-      default: "#e6e6e6",
-    },
     typography: {
-      fontFamily: [
-        "-apple-system",
-        "BlinkMacSystemFont",
-        '"Segoe UI"',
-        "Roboto",
-        '"Helvetica Neue"',
-        "Arial",
-        "sans-serif",
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-      ].join(","),
+      h5: {
+        fontFamily: "Oswald",
+      },
+      body2: {
+        fontFamily: "Droid Sans",
+        letterSpacing: "0.05em",
+      },
+      h2: {
+        fontFamily: "Oswald",
+      },
+      body1: {
+        fontFamily: "Droid Sans",
+        letterSpacing: "0.05em",
+      },
     },
   },
 };

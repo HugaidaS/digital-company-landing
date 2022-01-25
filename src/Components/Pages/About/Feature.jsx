@@ -35,7 +35,13 @@ export const Feature = ({
               </Typography>
             </Grid>
           </Grid>
-          <Box sx={{ height: "90%", overflow: "auto" }}>
+          <Box
+            sx={{
+              height: "90%",
+              overflow: "auto",
+              lineHeight: "1.5rem",
+            }}
+          >
             <List component="div" disablePadding>
               {description.map((string) => {
                 return (
