@@ -4,7 +4,7 @@ import { useState } from "react";
 import { mainTheme } from "../../../../App/Theme/mainTheme";
 
 const buttonCollapse = {
-  [mainTheme.breakpoints.up("lg")]: {
+  [mainTheme.breakpoints.up("md")]: {
     display: "none",
   },
   boxShadow: "none",

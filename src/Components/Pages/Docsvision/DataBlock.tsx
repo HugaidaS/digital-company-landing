@@ -1,13 +1,16 @@
 import { Box, Button, Grid, Paper, Typography } from "@mui/material";
 import React from "react";
 
-export const DataBlock = (props) => {
+interface Props {
+  href: string;
+  image: string;
+  title: string;
+}
+export const DataBlock = (props: Props) => {
   const { href, image, title } = props;
-  console.log(props);
   return (
-    <Grid item xs={12} md={6} lg={6}>
+    <Grid item xs={12} sm={6} md={6} lg={6}>
       <Paper
-        variant="rounded"
         elevation={5}
         sx={{
           height: "350px",
@@ -27,6 +30,7 @@ export const DataBlock = (props) => {
             boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
             backdropFilter: "blur(5px)",
             borderRadius: "4px",
+            marginBottom: "-1px",
           }}
         >
           <Typography

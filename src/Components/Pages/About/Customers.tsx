@@ -3,10 +3,10 @@ import HorizontalRuleIcon from "@mui/icons-material/HorizontalRule";
 import toChunk from "../../../App/Utils/toChunk";
 import { Box, Container, Grid, Paper, Typography } from "@mui/material";
 
-function Item(props) {
+function Item(props: any) {
   return (
     <Grid container spacing={2}>
-      {props.chunk.map((item, i) => {
+      {props.chunk.map((item: any, i: number) => {
         return (
           <Grid item xs={12} sm={4} md={4} lg={4}>
             <Paper>
@@ -71,12 +71,15 @@ const Customers = () => {
     >
       <Container maxWidth="md">
         <Typography variant="h5" align="center">
-          <Box sx={{ fontWeight: "500", margin: "1rem" }}>Наши заказчики</Box>
+          <Box sx={{ fontWeight: "500", padding: "1.5rem 0 0.5rem 0" }}>
+            Наши заказчики
+          </Box>
           <Typography variant="caption" align="center" color="textSecondary">
             <Box
               sx={{
                 fontSize: "15px",
                 margin: "1rem",
+                fontFamily: "Oswald",
               }}
             >
               Компания “Эркер” на рынке уже более 10 лет и успешно решает

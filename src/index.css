@@ -1,5 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
+  scroll-behavior: smooth;
   overflow-x: hidden;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -38,6 +42,7 @@ section {
   align-items: center;
   box-sizing: border-box;
   justify-content: space-around;
+  padding: 2rem 0;
 }
 div::-webkit-scrollbar {
   width: 6px;
@@ -64,12 +69,16 @@ main {
 }
 
 @media (max-width: 720px) {
+  h3,
+  h2 {
+    font-size: 2.3rem !important;
+  }
+  h5 {
+    font-size: 1.3rem !important;
+  }
+}
+@media (max-width: 300px) {
   html {
     font-size: 10px;
   }
 }
-/* @media (max-width: 300px) {
-  html {
-    font-size: 10px;
-  }
-} */

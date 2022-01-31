@@ -2,6 +2,7 @@ import AppBar from "./Components/Navigation/AppBarWithStyles";
 import { MainPage } from "./Components/mainPage";
 import { mainTheme } from "./App/Theme/mainTheme";
 import { Box } from "@mui/material";
+import { Footer } from "./Components/Navigation/FooterContainer";
 
 const app = {
   color: mainTheme.palette.primary.main,
@@ -9,11 +10,12 @@ const app = {
   fontSize: "10px",
 };
 
-function App(props: any) {
+function App() {
   return (
     <Box sx={app}>
       <AppBar />
       <MainPage />
+      <Footer />
     </Box>
   );
 }

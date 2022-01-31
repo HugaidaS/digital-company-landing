@@ -9,7 +9,6 @@ export const FeaturesContainer = () => {
     window.addEventListener("scroll", function (e) {
       if (window.scrollY > 350) {
         setOptionsVisibility(true);
-        console.log(window.scrollY);
       }
     });
   }, []);

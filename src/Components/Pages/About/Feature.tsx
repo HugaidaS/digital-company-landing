@@ -2,6 +2,15 @@ import { Avatar, Box, Grid, List, ListItem, Typography } from "@mui/material";
 import Grow from "@mui/material/Grow";
 import Paper from "@mui/material/Paper";
 
+interface Props {
+  showOptions: boolean;
+  key: number;
+  title: string;
+  description: string[];
+  delay: number;
+  image: string;
+}
+
 export const Feature = ({
   showOptions,
   key,
@@ -9,10 +18,10 @@ export const Feature = ({
   description,
   delay,
   image,
-}) => {
+}: Props) => {
   return (
     <Grow in={showOptions} timeout={delay}>
-      <Grid item key={key} xs={12} md={6} lg={3}>
+      <Grid item key={key} xs={12} sm={6} md={6} lg={3}>
         <Paper
           key={1}
           elevation={3}

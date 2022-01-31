@@ -10,7 +10,7 @@ const AboutUs = () => {
           <Box
             sx={{
               fontWeight: "700",
-              marginBottom: "2.5rem",
+              paddingBottom: "2.5rem",
             }}
           >
             Почему выбирают Нас?

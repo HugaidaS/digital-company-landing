@@ -1,6 +1,6 @@
 import ButtonAppBarCollapse from "./ButtonAppBarCollapse/ButtonAppBarCollapse";
 import NavTabs from "./Tabs/Tabs";
-import AllLinkTabs from "../../../App/LinkTabsHoc";
+import AllLinkTabs from "../../../App/Hoc/LinkTabsHoc";
 import { mainTheme } from "../../../App/Theme/mainTheme";
 import { Box, MenuItem } from "@mui/material";
 
