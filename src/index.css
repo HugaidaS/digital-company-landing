@@ -34,6 +34,10 @@ h3,
 h5 {
   font-family: "Oswald", sans-serif !important;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 section {
   height: auto;
   min-height: 100vh;
@@ -43,6 +47,18 @@ section {
   box-sizing: border-box;
   justify-content: space-around;
   padding: 2rem 0;
+}
+footer a {
+  color: rgb(187, 218, 245);
+}
+footer {
+  padding: 5px 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 div::-webkit-scrollbar {
   width: 6px;

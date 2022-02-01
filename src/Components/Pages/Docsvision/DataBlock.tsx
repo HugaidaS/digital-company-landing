@@ -42,6 +42,7 @@ export const DataBlock = (props: Props) => {
           </Typography>
           <Button
             href={href}
+            target="_blank"
             variant="contained"
             color="secondary"
             size="medium"
