@@ -1,26 +1,10 @@
 import AppBarCollapse from "./AppBar/AppBarCollapse";
 import { HideOnScroll } from "./HideOnScroll";
-import {
-  AppBar,
-  Button,
-  Container,
-  IconButton,
-  Toolbar,
-  Typography,
-  Box,
-} from "@mui/material";
+import { AppBar, Button, IconButton, Toolbar, Typography } from "@mui/material";
 import { mainTheme } from "../../App/Theme/mainTheme";
 
 const toggleDrawer = { borderRadius: "5%" };
-const statusImage = {
-  margin: "0",
-  padding: "0",
-  maxWidth: "250px",
-  maxHeight: "150px",
-  [mainTheme.breakpoints.down("md")]: {
-    display: "none",
-  },
-};
+
 const logoTitleAppBar = {
   margin: "0 10px",
   fontWeight: "Bold",
@@ -31,7 +15,7 @@ const logoTitleAppBar = {
 };
 const toolbar = {
   display: "flex",
-  justifyContent: "space-around",
+  justifyContent: "space-between",
   [mainTheme.breakpoints.down("md")]: {
     justifyContent: "space-between",
   },
@@ -59,13 +43,6 @@ const ButtonAppBar = (props: any) => {
           <Toolbar sx={toolbar}>
             <Button children={logoButton} href="#home" color="primary" />
             <AppBarCollapse />
-            <Box sx={statusImage}>
-              <Container
-                component="img"
-                alt="status"
-                src="./imgs/SPG_status.png"
-              />
-            </Box>
           </Toolbar>
         </AppBar>
       </HideOnScroll>

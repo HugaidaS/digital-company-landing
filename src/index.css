@@ -38,6 +38,10 @@ a {
   text-decoration: none;
   color: inherit;
 }
+main {
+  background-image: url(../public/imgs/4bg.webp);
+  background-size: cover;
+}
 section {
   height: auto;
   min-height: 100vh;
@@ -54,8 +58,8 @@ footer a {
 footer {
   padding: 5px 1rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -77,11 +81,6 @@ div::-webkit-scrollbar-thumb:hover {
 }
 div::-webkit-scrollbar-thumb:active {
   background: rgba(0, 0, 0, 0.9);
-}
-
-main {
-  background-image: url(../public/imgs/4bg.webp);
-  background-size: cover;
 }
 
 @media (max-width: 720px) {
